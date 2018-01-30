@@ -1,0 +1,210 @@
+How to install
+
+Add to header
+<head>
+<!-- bubomenu -->
+<link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet'/>
+<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+<style>
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+}
+
+#wrapping_table_id {
+  display: block;
+}
+
+#wrapping_table_id td {
+  display: inline-block;
+}
+</style>
+
+<script name='showSubMenu'>
+$(document).ready(function(){
+  $('.dropdown-submenu a.submenu-title').on("click", function(e){
+    $(this).next('ul').toggle();
+    e.stopPropagation();
+    e.preventDefault();
+  });
+});
+</script>
+<!-- /bubomenu -->
+
+</head>
+
+Add for each menu:
+
+<!-- bubomenu -->
+<div class='container'>
+    <p/>
+    <div class='dropdown'>
+        <button class='btn btn-default dropdown-toggle' data-toggle='dropdown' type='button'>Blabla<span class='caret'/></button>
+        <ul class='dropdown-menu'>
+            <li><a href='link to category' tabindex='-1'>Ukraina</a></li>
+            <div class='divider'></div>
+            <li><a href='link to item0' tabindex='-1'>Submenu item 0</a></li>
+            <li><a href='link to item1' tabindex='-1'>Submenu item 1</a></li>
+
+            <li class='dropdown-submenu'>
+                <a class='submenu-title' href='#' tabindex='-1'>submenu title<span class='caret'/></a>
+                <ul class='dropdown-menu'>
+                    <li><a href='link to submenu item0.0'>Submenu item 0.0</a></li>
+                    <li><a href='link to submenu item0.1'>Submenu item 0.1</a></li>                
+                </ul>
+             </li>
+        </ul>
+    </div>
+</div>
+<!-- /bubomenu -->
+
+To have to buttons next to each other:
+  <table>
+      <tr>
+          <td>
+             <div class='dropdown'> ... </div>
+          </td>
+           <td>
+            <div class='dropdown'> ... </div>
+          </td>
+        </tr>
+  </table>
+
+Example content to use above empty widget:
+    <div class='region-inner tabs-inner'>
+
+    <!-- bubomenu -->
+<div class='container'>
+  <p/>
+  <div class='dropdown'>
+    <button class='btn btn-default dropdown-toggle' data-toggle='dropdown' type='button'>Ukraina<span class='caret'/></button>
+    <ul class='dropdown-menu'>
+        <li><a href='http://jabolowaballada.blogspot.com/search/label/ukraina' tabindex='-1'>Ukraina</a></li>
+        <div class='divider'/>
+        <li><a href='http://jabolowaballada.blogspot.com/2015/03/ukraina-delta-dunaju-czyli-z-wiosem-w.html' tabindex='-1'>Odessa, Delta Dunaju czyli z wiosłem w świat (2009)</a></li>
+        <li><a href='http://jabolowaballada.blogspot.com/2015/03/ukraina-kinburn-arabatka-2010.html' tabindex='-1'>Kinburn, Arabatka (2010)</a></li>
+        <li><a href='http://jabolowaballada.blogspot.com/2015/03/ukraina-zakarpackie-waskotorowki-2011.html' tabindex='-1'>Zakarpackie wąskotorówki (2011)</a></li>
+
+        <li class='dropdown-submenu'>
+            <a class='submenu-title' href='#' tabindex='-1'>Ukraina bagna piach i duzo piwa czyli<span class='caret'/></a>
+            <ul class='dropdown-menu'>
+                <li><a href='http://jabolowaballada.blogspot.com/2015/04/ukraina-bagna-piach-i-duzo-piwa-czyli.html'>Majowy wypad na Polesie cz.1 (2011)</a></li>
+                <li><a href='http://jabolowaballada.blogspot.com/2015/04/ukraina-bagna-piach-i-duzo-piwa-czyli_1.html'>Majowy wypad na Polesie cz.2 (2011)</a></li>                
+              </ul>
+        </li>
+
+        <li class='dropdown-submenu'>
+            <a class='submenu-title' href='#' tabindex='-1'>ukraina bekit i zielen szackie jeziora<span class='caret'/></a>
+            <ul class='dropdown-menu'>
+                <li><a href='http://jabolowaballada.blogspot.com/2015/07/ukraina-bekit-i-zielen-szackie-jeziora.html'>Szackie Jeziora, poleskie wioski nad Prypecią (2015) cz.1</a></li>
+                <li><a href='http://jabolowaballada.blogspot.com/2015/07/ukraina.html'>Szackie Jeziora, poleskie wioski nad Prypecią (2015) cz.2</a></li>
+                <li><a href='http://jabolowaballada.blogspot.com/2015/07/ukraina-bekit-i-zielen-szackie-jeziora_8.html'>Szackie Jeziora, poleskie wioski nad Prypecią (2015) cz.3</a></li>
+                <li><a href='http://jabolowaballada.blogspot.com/2015/07/ukraina-bekit-i-zielen-szackie-jeziora_13.html'>Szackie Jeziora, poleskie wioski nad Prypecią (2015) cz.4</a></li>
+                <li><a href='http://jabolowaballada.blogspot.com/2015/07/ukraina-bekit-i-zielen-szackie-jeziora_21.html'>Szackie Jeziora, poleskie wioski nad Prypecią (2015) cz.5</a></li>
+              </ul>        
+        </li>
+
+        <li><a href='http://jabolowaballada.blogspot.com/2017/01/czas-nie-goni-nas-cz53-ukraina.html'>Ukraina, pododeskie kurorty (2016)</a></li>
+        <li><a href='http://jabolowaballada.blogspot.com/2017/01/czas-nie-goni-nas-cz54-na-srodkowej.html'>Na środkowej Ukrainie (2016)</a></li>
+        <li><a href='http://jabolowaballada.blogspot.com/2017/01/czas-nie-goni-nas-cz55-gdzies-na.html'>Gdzies na Ukrainie (2016)</a></li>
+        <li><a href='http://jabolowaballada.blogspot.com/2017/01/czas-nie-goni-nas-cz56-ukraina-lipniazka.html'>Ukraina, Lipniażka (2016)</a></li>
+        <li><a href='http://jabolowaballada.blogspot.com/2017/01/czas-nie-goni-nas-cz57-ukraina-baza.html'>Ukraina, baza rakietowa (2016)</a></li>
+        <li><a href='http://jabolowaballada.blogspot.com/2017/02/czas-nie-goni-nas-cz58-ukraina-powrot.html'>Ukraina, powrot (2016)</a></li>
+   </ul>
+
+</div>
+      </div>
+      <!-- /bubomenu -->
+
+input data format:
+UKRAINA
+  UKRAINA|http://jabolowaballada.blogspot.com/search/label/ukraina
+  Odessa, Delta Dunaju czyli z wiosłem w świat (2009)|http://jabolowaballada.blogspot.com/2015/03/ukraina-delta-dunaju-czyli-z-wiosem-w.html
+  weekend we Lwowie (2010)|http://jabolowaballada.blogspot.com/2015/04/ukraina-weekend-we-lwowie-2010.html
+  Kinburn, Arabatka (2010)|http://jabolowaballada.blogspot.com/2015/03/ukraina-kinburn-arabatka-2010.html
+  Zakarpackie wąskotorówki (2011)|http://jabolowaballada.blogspot.com/2015/03/ukraina-zakarpackie-waskotorowki-2011.html
+  Majowy wypad na Polesie
+    Majowy wypad na Polesie cz.1 (2011)|http://jabolowaballada.blogspot.com/2015/04/ukraina-bagna-piach-i-duzo-piwa-czyli.html
+    Majowy wypad na Polesie cz.2 (2011)|http://jabolowaballada.blogspot.com/2015/04/ukraina-bagna-piach-i-duzo-piwa-czyli_1.html
+  Szackie Jeziora, poleskie wioski nad Prypecią (2015)
+    Szackie Jeziora, poleskie wioski nad Prypecią (2015) cz.1|http://jabolowaballada.blogspot.com/2015/07/ukraina-bekit-i-zielen-szackie-jeziora.html
+    Szackie Jeziora, poleskie wioski nad Prypecią (2015) cz.2|http://jabolowaballada.blogspot.com/2015/07/ukraina.html
+    Szackie Jeziora, poleskie wioski nad Prypecią (2015) cz.3|http://jabolowaballada.blogspot.com/2015/07/ukraina-bekit-i-zielen-szackie-jeziora_8.html
+    Szackie Jeziora, poleskie wioski nad Prypecią (2015) cz.4|http://jabolowaballada.blogspot.com/2015/07/ukraina-bekit-i-zielen-szackie-jeziora_13.html
+    Szackie Jeziora, poleskie wioski nad Prypecią (2015) cz.5|http://jabolowaballada.blogspot.com/2015/07/ukraina-bekit-i-zielen-szackie-jeziora_21.html
+  Ukraina, pododeskie kurorty (2016)|http://jabolowaballada.blogspot.com/2017/01/czas-nie-goni-nas-cz53-ukraina.html
+  Na środkowej Ukrainie (2016)|http://jabolowaballada.blogspot.com/2017/01/czas-nie-goni-nas-cz54-na-srodkowej.html
+  Gdzies na Ukrainie (2016)|http://jabolowaballada.blogspot.com/2017/01/czas-nie-goni-nas-cz55-gdzies-na.html
+  Ukraina, Lipniażka (2016)|http://jabolowaballada.blogspot.com/2017/01/czas-nie-goni-nas-cz56-ukraina-lipniazka.html
+  Ukraina, baza rakietowa (2016)|http://jabolowaballada.blogspot.com/2017/01/czas-nie-goni-nas-cz57-ukraina-baza.html
+  Ukraina, powrot (2016)|http://jabolowaballada.blogspot.com/2017/02/czas-nie-goni-nas-cz58-ukraina-powrot.html
+
+
+fiddle:https://jsfiddle.net/dvL4pxv3/
+
+<html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+
+  <head>
+    <!-- bubomenu -->
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' />
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    
+    <style>
+      .dropdown-submenu {
+        position: relative;
+      }
+      
+      .dropdown-submenu .dropdown-menu {
+        top: 0;
+        left: 100%;
+        margin-top: -1px;
+      }
+
+    </style>
+
+<script name='showSubMenu'>
+$(document).ready(function(){
+  $('.dropdown-submenu a.submenu-title').on("click", function(e){
+    $(this).next('ul').toggle();
+    e.stopPropagation();
+    e.preventDefault();
+  });
+});
+</script>
+    <!-- /bubomenu -->
+
+  </head>
+
+  <body>
+    <!-- bubomenu -->
+    <div class='container'>
+      <p/>
+      <div class='dropdown'>
+        <button class='btn btn-default dropdown-toggle' data-toggle='dropdown' type='button'>Blabla<span class='caret' /></button>
+        <ul class='dropdown-menu'>
+          <li><a href='link to category' tabindex='-1'>Menu 1</a></li>
+          <div class='divider'></div>
+          <li><a href='link to item0' tabindex='-1'>Submenu item 0</a></li>
+          <li><a href='link to item1' tabindex='-1'>Submenu item 1</a></li>
+
+          <li class='dropdown-submenu'>
+            <a class='submenu-title' href='#' tabindex='-1'>submenu title<span class='caret'/></a>
+            <ul class='dropdown-menu'>
+              <li><a href='link to submenu item0.0'>Submenu item 0.0</a></li>
+              <li><a href='link to submenu item0.1'>Submenu item 0.1</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <!-- /bubomenu -->
+  </body>
+
+</html>
